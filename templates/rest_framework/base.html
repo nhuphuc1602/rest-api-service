@@ -1,0 +1,38 @@
+{% extends "rest_framework/base.html" %}
+
+{% block breadcrumbs %}
+        <ul class="breadcrumb">
+            <h1 >Question Answer Rest API Service</h1>
+            {% for breadcrumb_name, breadcrumb_url in breadcrumblist %}
+              {% if forloop.last %}
+                <li class="active"><a href="{{ breadcrumb_url }}">{{ breadcrumb_name }}</a></li>
+              {% else %}
+                <li><a href="{{ breadcrumb_url }}">{{ breadcrumb_name }}</a></li>
+              {% endif %}
+            {% empty %}
+              {% block breadcrumbs_empty %}&nbsp;{% endblock breadcrumbs_empty %}
+            {% endfor %}
+            <li><a class="nav-link" href="/"
+                >Home <span class="sr-only">(current)</span></a
+              ></li>
+              <li><a class="nav-link" href="/admin"
+                >Admin <span class="sr-only">(current)</span></a
+              ></li>
+              {% if not user.is_authenticated %}
+                  <li>
+                  <a href="/rest-auth/login/">Login</a>
+                  </li>
+                  <li>
+                  <a href="/api/register/">Register</a>
+                  </li>
+              {%else%}
+                  <li>
+                  <a href="accounts/reset-password/">{{user.username}}</a>
+                  </li>
+                  <li>
+                  <a href="/rest-auth/logout/">Logout</a>
+                  </li>
+              {%endif%}
+              
+        </ul>
+{% endblock %}

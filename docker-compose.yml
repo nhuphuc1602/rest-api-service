@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    web:
+        build: .
+        command: python qa_api_2/manage.py runserver 0.0.0.0:5005
+        volumes:
+            - .:/code
+        ports:
+            - "5005:5005"

@@ -1,0 +1,41 @@
+{% extends "rest_framework/base.html" %}
+
+
+{% block content %}
+
+<div>
+    
+    <p>
+        <br> <strong>Chương trình Restful API Service Question & Answer được viết bằng :</strong> <br>
+         - <a href = "https://www.python.org/downloads/">Python3</a><br>
+         - <a href = "https://www.django-rest-framework.org/">Django Rest Framework</a><br><br>
+         <strong>Thành phần cấu trúc của chương trình :</strong><br>
+         - API Question cho phép người dùng tạo câu hỏi (status True là đóng, False là mở)<br>       
+         - API Answer cho phép người dùng xam câu hỏi và tạo câu trả lời<br>
+         - Người dùng cần đăng ký tài khoản và đăng nhập để đăng câu hỏi và tạo câu trả lời<br>
+         - Nhập số pk sau hai đường dẫn api/questions/[pk] và api/answers/[pk] để RUD (xem ,sửa, xóa)<br>
+         - API Question và API Answer có upvote, downvote và tag<br>
+         - API Register cho phép người dùng đăng ký tài khoản<br>
+         - API Login cho phép người dùng đăng nhập tài khoản (permission dựa trên token)<br>
+         - API Logout cho phép người dùng đăng xuất (gửi post để logout)<br>
+         - API Tags cho phép người dùng thêm tag<br>
+    </p>
+
+    <p>
+        <strong>Tất cả các đường dẫn của chương trình :</strong> <br>
+        api/questions/ <br>
+        api/answers/<br>
+        api/tags/<br>
+        api/token/<br>
+        api/token/refresh/<br>
+        rest-auth/register/<br>
+        rest-auth/login/<br>
+        rest-auth/logout/<br>
+        vote/<br>
+        user/<br>
+        <h4>Create by <a href = "https://www.linkedin.com/in/phuc-vo-nhu-452684188/"> Vo Nhu Phuc </a> <br> Email : nhuphuc1602@gmail.com</h3>
+    </p>
+
+</div>
+
+{% endblock content %}

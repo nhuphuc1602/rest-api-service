@@ -1,0 +1,28 @@
+{% extends "rest_framework/base.html" %}
+
+
+{% block content %}
+<br>
+
+<div class = "container mt-5">
+    <ul>
+    <li>
+        <a class="nav-link" href="/api/questions/">API Question</a>
+        <p>/api/questions/</p>
+    </li>
+    <li>
+        <a class="nav-link" href="/api/answers/">API Answers</a>
+        <p>/api/answers/</p>
+    </li>
+    <li>
+        <a class="nav-link" href="/api/tags/">API Tags</a>
+        <p>/api/tags/</p>
+    </li>
+    <li>
+        <a class="nav-link" href="/readme">Read me</a>
+        <p>/readme/</p>
+    </li>
+    </ul>
+</div>
+
+{% endblock content %}
